@@ -48,6 +48,23 @@ main {
     flex-grow: 1;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin: 60px auto;
+    border: 2px solid white;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
 footer {
     background-color: white;
     height: 60px;
