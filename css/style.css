@@ -48,21 +48,30 @@ main {
     flex-grow: 1;
 }
 
+.grid-container {
+    display: flex;
+    align-items: center;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
     margin: 60px auto;
-    border: 2px solid white;
+    border: 1px solid black;
 }
 
 .square {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid white;
+    border: 1px solid black;
     cursor: pointer;
+}
+
+.square.clicked {
+    background: rgb(0, 162, 255);
 }
 
 footer {
