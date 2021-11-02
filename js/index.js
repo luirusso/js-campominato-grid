@@ -24,6 +24,9 @@ const gridContainer = document.querySelector('.grid-container');
 
 playBtn.addEventListener('click', () => {
     
+    // Reset content
+    gridContainer.innerHTML = '';
+
     // Set grid dimensions
     const gridDimension = difficultyLevel.value;
     console.log(gridDimension);
@@ -65,8 +68,23 @@ playBtn.addEventListener('click', () => {
     for (let i = 1; i <= cellsNumber; i++) {
         // Generate random numbers for squares
         const num = getRandomNumber(numList, 1, cellsNumber);
+        numList.push(num);
+
+        // Generate square
+        const square = createGridSquare(num, cellsPerSide);
+
+        square.addEventListener('click', function() {
+            this.classList.add('clicked');
+        });
+
+        // Add generated square to grid
+        grid.append(square);
+
     }
     console.log(numList);
+
+    // Add grid
+    gridContainer.append(grid);
 });
 
 
@@ -100,4 +118,17 @@ function createGridSquare(num, cells) {
 
     const node = document.createElement('div');
     node.classList.add('square', `square-${type}`);
+    node.style.width = `calc(100% / ${cells} - 2px)`;
+    node.style.height = `calc(100% / ${cells} - 2px)`;
+
+    // Create span
+
+    const span = document.createElement('span');
+    span.append(num);
+
+    // Add span inside square
+
+    node.append(span);
+
+    return node;
 }
