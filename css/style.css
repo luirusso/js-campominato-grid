@@ -6,6 +6,9 @@ body {
     box-sizing: border-box;
     font-family: sans-serif;
     background-color: #7FFFD4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
@@ -14,12 +17,41 @@ header {
 
 nav img {
     width: 4%;
-    padding: 0 1rem;
+    padding-right: 1rem;
 }
 
-.logo-container {
+.nav-container {
     display: flex;
     flex-direction: row;
     align-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.logo-header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.btn-play {
+    padding: 0 2rem;
+}
+
+#difficulty {
+    width: 145px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
 }
