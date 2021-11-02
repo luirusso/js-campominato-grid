@@ -1,0 +1,25 @@
+/* GENERAL STYLES */ 
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #7FFFD4;
+}
+
+header {
+    background-color: white;
+}
+
+nav img {
+    width: 4%;
+    padding: 0 1rem;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
