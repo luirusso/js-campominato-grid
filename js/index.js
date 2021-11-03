@@ -109,15 +109,11 @@ function getRandomNumber(list, min, max) {
  */
 
 function createGridSquare(num, cells) {
-    
-    // Even or odd?
-
-    const type = (num % 2 === 0) ? 'even' : 'odd';
 
     // Create square node
 
     const node = document.createElement('div');
-    node.classList.add('square', `square-${type}`);
+    node.classList.add('square');
     node.style.width = `calc(100% / ${cells} - 2px)`;
     node.style.height = `calc(100% / ${cells} - 2px)`;
 
