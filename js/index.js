@@ -66,12 +66,9 @@ playBtn.addEventListener('click', () => {
     const numList = [];
 
     for (let i = 1; i <= cellsNumber; i++) {
-        // Generate random numbers for squares
-        const num = getRandomNumber(numList, 1, cellsNumber);
-        numList.push(num);
 
         // Generate square
-        const square = createGridSquare(num, cellsPerSide);
+        const square = createGridSquare(i, cellsPerSide);
 
         square.addEventListener('click', function() {
             this.classList.add('clicked');
@@ -117,14 +114,9 @@ function createGridSquare(num, cells) {
     node.style.width = `calc(100% / ${cells} - 2px)`;
     node.style.height = `calc(100% / ${cells} - 2px)`;
 
-    // Create span
-
-    const span = document.createElement('span');
-    span.append(num);
-
     // Add span inside square
 
-    node.append(span);
+    node.append(num);
 
     return node;
 }
